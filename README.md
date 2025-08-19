@@ -1,0 +1,95 @@
+# filtere
+
+A fast, async, multi-node censorship check API for Iran, built with Go and Fiber.
+
+## 🌍 Public API Endpoint
+
+You can use the public API at:
+
+```
+https://filtere.aleph.wtf/check?ip=<IP_OR_DOMAIN>&method=<http|ping|dns>
+```
+
+- **ip**: The IP address or domain to check (e.g., `google.com`)
+- **method**: One of `http`, `ping`, or `dns`
+- **Response**: JSON, with status and per-node results
+
+Example:
+```
+curl "https://filtere.aleph.wtf/check?ip=google.com&method=ping"
+```
+
+## 🚀 Self-Hosting
+
+1. Clone the repo and enter the directory:
+   ```
+   git clone <your-repo-url>
+   cd filtere
+   ```
+2. Build and run:
+   ```
+   go run main.go
+   ```
+3. The service will listen on port `51385` by default.
+4. Use the same API as above, but with your own server address.
+
+## 📝 API Response
+
+- `status`: `ok` (results ready), `pending` (still waiting), or `error`
+- `data`: Per-node results (see check-host.net docs for details)
+- **Each node result will be either `OK` or `TIMEOUT` (matching check-host.net output).**
+
+---
+
+## 👤 Developed by
+- [@hey_itsmyturn (X/Twitter)](https://x.com/hey_itsmyturn)
+- [Telegram](https://t.me/itsthealephyouknowfromtwitter)
+
+---
+
+# فیلتره (filtere)
+
+یک API سریع و غیرهمزمان برای بررسی فیلترینگ در ایران، ساخته‌شده با Go و Fiber.
+
+## 🌍 استفاده از API عمومی
+
+می‌توانید از API عمومی استفاده کنید:
+
+```
+https://filtere.aleph.wtf/check?ip=<آی‌پی یا دامنه>&method=<http|ping|dns>
+```
+
+- **ip**: آی‌پی یا دامنه مورد نظر (مثلاً `google.com`)
+- **method**: یکی از `http`، `ping` یا `dns`
+- **پاسخ**: JSON با وضعیت و نتایج هر نود
+
+مثال:
+```
+curl "https://filtere.aleph.wtf/check?ip=google.com&method=ping"
+```
+
+## 🚀 راه‌اندازی شخصی
+
+۱. ریپو را کلون کنید و وارد پوشه شوید:
+   ```
+   git clone <your-repo-url>
+   cd filtere
+   ```
+۲. اجرا:
+   ```
+   go run main.go
+   ```
+۳. سرویس به طور پیش‌فرض روی پورت `51385` گوش می‌دهد.
+۴. از همان API بالا با آدرس سرور خودتان استفاده کنید.
+
+## 📝 پاسخ API
+
+- `status`: `ok` (نتایج آماده)، `pending` (در انتظار)، یا `error`
+- `data`: نتایج هر نود (مطابق مستندات check-host.net)
+- **نتیجه هر نود یا `OK` است یا `TIMEOUT` (مطابق خروجی check-host.net).**
+
+---
+
+## 👤 توسعه‌دهنده
+- [@hey_itsmyturn (توییتر/X)](https://x.com/hey_itsmyturn)
+- [تلگرام](https://t.me/itsthealephyouknowfromtwitter)
