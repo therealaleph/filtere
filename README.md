@@ -34,7 +34,7 @@ curl "https://filtere.aleph.wtf/check?ip=google.com&method=ping"
    ```
    go run main.go
    ```
-۳. سرویس به طور پیش‌فرض روی پورت `51385` گوش می‌دهد.
+۳. سرویس به طور پیش‌فرض روی پورت `3000` گوش می‌دهد.
 ۴. از همان API بالا با آدرس سرور خودتان استفاده کنید.
 
 ## 📝 پاسخ API
@@ -83,7 +83,7 @@ curl "https://filtere.aleph.wtf/check?ip=google.com&method=ping"
    ```
    go run main.go
    ```
-3. The service will listen on port `51385` by default.
+3. The service will listen on port `3000` by default.
 4. Use the same API as above, but with your own server address.
 
 ## 📝 API Response
